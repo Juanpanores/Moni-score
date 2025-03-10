@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import API_URL from '../../config'
 
 interface User {
   id: number;
@@ -30,7 +31,7 @@ const useClientContext = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('/api/v4/scoring/users/', {
+      const response = await fetch(`${API_URL}/api/v4/scoring/users/`, {
         method: 'GET'
       });
       if (!response.ok) {
