@@ -1,0 +1,67 @@
+.user-table {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 16px;
+}
+
+.user-table__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px
+}
+
+.user-table__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.user-table__container{
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF; /* Blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  background-color: #E5F2FF;
+}
+
+.user-table__actions-buttons{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: black;
+  gap: 8px
+}
+
+.user-table__filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-table__filters-input {
+  gap: 16px;
+  margin-bottom: 16px;
+  min-width: 50%;
+}
+
+.user-table__filters-input .MuiTextField-root {
+  border-radius: 8px;
+  background-color: white;
+  min-width: 50%;
+}
+
+.user-table__form-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

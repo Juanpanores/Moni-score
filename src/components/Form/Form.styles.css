@@ -1,7 +1,8 @@
-.user-form {
+.scoring-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  background-color: #FFFFFF; /* Blanco */
 }
 
 .form-container {
