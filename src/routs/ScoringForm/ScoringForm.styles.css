@@ -1,18 +1,11 @@
-.user-form {
+.scoring-form__container {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-row {
-  display: flex;
-  gap: 16px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .centered-container {
@@ -20,12 +13,15 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #E5F2FF;
 }
 
 .approved {
   color: green;
+  background-color: #E5F2FF;
 }
 
 .rejected {
   color: red;
+  background-color: #E5F2FF;
 }
