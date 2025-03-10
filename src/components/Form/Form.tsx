@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, MenuItem, Box, CircularProgress } from '@mui/material';
 import './Form.styles.css';
+import API_URL from '../../config';
 
 
 
@@ -95,7 +96,7 @@ const Form: React.FC<FormProps> = ({ onDialogOpen, user, onCancel }) => {
     setLoading(true);
     try {
       if (user) {
-        const patchResponse = await fetch(`api/scoring/users/${user.dni}`, {
+        const patchResponse = await fetch(`${API_URL}/api/v4/scoring/users/${user.dni}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json'
@@ -109,13 +110,13 @@ const Form: React.FC<FormProps> = ({ onDialogOpen, user, onCancel }) => {
           onDialogOpen('Cambios guardados exitosamente', 'ok');
         }
       } else {
-        const response = await fetch(`api/scoring/pre-score/${formData.dni}`, {
+        const response = await fetch(`${API_URL}/api/v4/scoring/pre-score/${formData.dni}`, {
           method: 'GET'
         });
         const result = await response.json();
         const statusMessage = result.status === 'approve' ? '¡Exito! Puede acceder a un prestamo personal.' : 'Rechazado, no puede acceder a un prestamo personal.';
 
-        const postResponse = await fetch(`api/scoring/users/`, {
+        const postResponse = await fetch(`${API_URL}/api/v4/scoring/users/`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

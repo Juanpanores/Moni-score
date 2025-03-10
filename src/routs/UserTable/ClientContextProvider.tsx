@@ -31,7 +31,7 @@ const useClientContext = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`api/scoring/users/`, {
+      const response = await fetch(`${API_URL}/api/v4/scoring/users/`, {
         method: 'GET'
       });
       if (!response.ok) {
